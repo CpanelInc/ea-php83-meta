@@ -11,10 +11,10 @@
 
 Summary:       Package that installs PHP 8.3
 Name:          %scl_name
-Version:       8.3.0
+Version:       8.3.1
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define        release_prefix 2
+%define        release_prefix 1
 Release:       %{release_prefix}%{?dist}.cpanel
 Group:         Development/Languages
 License:       GPLv2+
@@ -178,6 +178,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Thu Jan 04 2024 Cory McIntire <cory@cpanel.net> - 8.3.1-1
+- EA-11894: Update ea-php83 from v8.3.0 to v8.3.1
+
 * Thu Dec 14 2023 Julian Brown <julian.brown@cpanel.net> - 8.3.0-2
 - ZC-11475: Build on CentOS 7
 
