@@ -11,7 +11,7 @@
 
 Summary:       Package that installs PHP 8.3
 Name:          %scl_name
-Version:       8.3.13
+Version:       8.3.14
 Vendor:        cPanel, Inc.
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
 %define        release_prefix 1
@@ -178,6 +178,15 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Thu Nov 21 2024 Cory McIntire <cory@cpanel.net> - 8.3.14-1
+- EA-12578: Update ea-php83 from v8.3.13 to v8.3.14
+- (Single byte overread with convert.quoted-printable-decode filter). (CVE-2024-11233)
+- (Configuring a proxy in a stream context might allow for CRLF injection in URIs). (CVE-2024-11234)
+- (Integer overflow in the dblib quoter causing OOB writes). (CVE-2024-11236)
+- (Integer overflow in the firebird quoter causing OOB writes). (CVE-2024-11236)
+- (Leak partial content of the heap through heap buffer over-read). (CVE-2024-8929)
+- (OOB access in ldap_escape). (CVE-2024-8932)
+
 * Thu Oct 24 2024 Cory McIntire <cory@cpanel.net> - 8.3.13-1
 - EA-12497: Update ea-php83 from v8.3.12 to v8.3.13
 
