@@ -178,6 +178,9 @@ mkdir -p %{buildroot}/opt/cpanel/%{scl}/root/usr/share/locale
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Tue Oct 07 2025 Cory McIntire <cory.mcintire@webpros.com> - 8.3.26-1
+- EA-13170: Update ea-php83 from v8.3.25 to v8.3.26
+
 * Wed Oct 01 2025 Cory McIntire <cory.mcintire@webpros.com> - 8.3.26-1
 - EA-13149: Update ea-php83 from v8.3.25 to v8.3.26
 
